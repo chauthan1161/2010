@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chúc mừng 20/10 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffe3ec; --bg2:#fff4e6; --ink:#6b2c46; --pink:#ff7aa8; --pink-d:#e0568a;
+  --card:#fffafc; --fur:#ffd9a8; --fur-d:#f2b878; --line:#6b2c46;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#3a1c2b; --bg2:#2b1620; --ink:#ffd6e5; --pink:#ff8fb4; --pink-d:#ff6b9d;
+    --card:#4a2538; --fur:#ffd9a8; --fur-d:#f2b878; --line:#2b1620;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family:'Baloo 2',system-ui,sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 20% 10%,var(--bg2),transparent 50%),var(--bg);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.stage{width:min(92vw,460px);text-align:center;position:relative;z-index:2}
+h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(2rem,9vw,3rem);margin:.2em 0 0;color:var(--pink-d)}
+.sub{margin:0 0 .5em;font-size:1.05rem}
+.cat{width:min(70vw,260px);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.tail{transform-origin:200px 250px;animation:wag 2s ease-in-out infinite}
+@keyframes wag{50%{transform:rotate(14deg)}}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+button{
+  font:700 1.15rem 'Baloo 2',sans-serif;color:#fff;background:var(--pink-d);
+  border:0;border-radius:999px;padding:.7em 1.6em;cursor:pointer;
+  box-shadow:0 6px 0 #b33a6a;transition:transform .15s,box-shadow .15s;
+}
+button:hover{transform:translateY(-2px)}
+.q{font-size:1.3rem;font-weight:700;margin:.2em 0 .9em}
+.choices{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+#no{background:#a98fa0;box-shadow:0 6px 0 #7d6475}
+#no.run{position:fixed;z-index:5;transition:left .25s ease,top .25s ease}
+.hide{display:none}
+button:active{transform:translateY(5px);box-shadow:0 1px 0 #b33a6a}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.msg{
+  margin:1.2em auto 0;padding:1.1em 1.3em;background:var(--card);border-radius:24px;
+  border:3px dashed var(--pink);font-size:1.2rem;line-height:1.5;max-width:100%;
+  opacity:0;transform:scale(.6) translateY(20px);pointer-events:none;height:0;padding-block:0;margin-top:0;overflow:hidden;
+  transition:opacity .5s,transform .5s cubic-bezier(.3,1.6,.5,1);
+}
+.msg.show{opacity:1;transform:none;height:auto;padding-block:1.1em;margin-top:1.2em;pointer-events:auto}
+.msg b{color:var(--pink-d)}
+.heart{position:fixed;bottom:-30px;font-size:1.6rem;animation:rise linear forwards;z-index:1;pointer-events:none}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){
+  .cat,.tail,.eye{animation:none}
+  .msg{transition:opacity .2s}
+}
+</style>
+</head>
+<body>
+<main class="stage">
+  <h1>20/10</h1>
+  <p class="sub">Có một bé mèo muốn gửi lời chúc đến bạn 🌸</p>
+
+  <svg class="cat" viewBox="0 0 400 340" role="img" aria-label="Chú mèo dễ thương cầm bông hoa">
+    <g stroke="var(--line)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path class="tail" d="M290 260 C360 250 370 170 330 160" fill="none" stroke="var(--fur-d)" stroke-width="22"/>
+      <ellipse cx="200" cy="270" rx="95" ry="58" fill="var(--fur)"/>
+      <ellipse cx="160" cy="320" rx="22" ry="14" fill="#fff"/>
+      <ellipse cx="240" cy="320" rx="22" ry="14" fill="#fff"/>
+      <path d="M95 120 L105 40 L160 85 Z" fill="var(--fur)"/>
+      <path d="M305 120 L295 40 L240 85 Z" fill="var(--fur)"/>
+      <path d="M110 95 L113 62 L140 86 Z" fill="#ffb3c8" stroke="none"/>
+      <path d="M290 95 L287 62 L260 86 Z" fill="#ffb3c8" stroke="none"/>
+      <ellipse cx="200" cy="165" rx="115" ry="95" fill="var(--fur)"/>
+      <path d="M185 78 Q200 98 215 78" fill="none" stroke="var(--fur-d)"/>
+      <path d="M150 90 Q158 108 168 96" fill="none" stroke="var(--fur-d)"/>
+      <path d="M250 90 Q242 108 232 96" fill="none" stroke="var(--fur-d)"/>
+    </g>
+    <ellipse class="eye" cx="150" cy="165" rx="12" ry="16" fill="#3b1a2a"/>
+    <ellipse class="eye" cx="250" cy="165" rx="12" ry="16" fill="#3b1a2a"/>
+    <circle cx="154" cy="159" r="5" fill="#fff"/><circle cx="254" cy="159" r="5" fill="#fff"/>
+    <ellipse cx="120" cy="195" rx="20" ry="12" fill="#ff9bb8" opacity=".7"/>
+    <ellipse cx="280" cy="195" rx="20" ry="12" fill="#ff9bb8" opacity=".7"/>
+    <g stroke="var(--line)" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M190 190 L210 190 L200 202 Z" fill="#ff7aa8" stroke-linejoin="round"/>
+      <path d="M200 202 Q190 220 175 210 M200 202 Q210 220 225 210"/>
+      <path d="M85 180 L45 172 M85 195 L42 198 M315 180 L355 172 M315 195 L358 198" stroke-width="3"/>
+    </g>
+    <g transform="translate(300 250) rotate(12)">
+      <rect x="-3" y="0" width="6" height="55" fill="#6bbf6b" rx="3"/>
+      <g fill="#ff7aa8" stroke="var(--line)" stroke-width="3">
+        <circle cx="0" cy="-22" r="13"/><circle cx="21" cy="-7" r="13"/><circle cx="13" cy="17" r="13"/>
+        <circle cx="-13" cy="17" r="13"/><circle cx="-21" cy="-7" r="13"/>
+      </g>
+      <circle cx="0" cy="0" r="10" fill="#ffd54a" stroke="var(--line)" stroke-width="3"/>
+    </g>
+  </svg>
+
+  <p class="q" id="q">Bạn có xinh không nè? 🥺</p>
+  <div class="choices" id="choices">
+    <button id="btn" type="button" aria-controls="msg">Có 💖</button>
+    <button id="no" type="button">Không 🙈</button>
+  </div>
+
+  <p class="msg" id="msg" aria-live="polite">
+    Chúc người xinh đẹp như bạn có ngày <b>20/10</b> thật rực rỡ và ý nghĩa nhaaa :3
+  </p>
+</main>
+
+<script>
+const btn=document.getElementById('btn'), msg=document.getElementById('msg');
+const emojis=['💖','🌸','🐱','✨','🌷','💕'];
+function hearts(){
+  for(let i=0;i<22;i++){
+    const h=document.createElement('span');
+    h.className='heart';
+    h.textContent=emojis[i%emojis.length];
+    h.style.left=Math.random()*100+'vw';
+    h.style.animationDuration=(3+Math.random()*3)+'s';
+    h.style.animationDelay=(Math.random()*.8)+'s';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7500);
+  }
+}
+const no=document.getElementById('no');
+btn.addEventListener('click',()=>{
+  document.getElementById('q').classList.add('hide');
+  document.getElementById('choices').classList.add('hide');
+  msg.classList.add('show');
+  hearts();
+});
+msg.addEventListener('click',hearts);
+function dodge(e){
+  if(e&&e.cancelable)e.preventDefault();
+  no.classList.add('run');
+  const w=innerWidth-no.offsetWidth-16, h=innerHeight-no.offsetHeight-16;
+  no.style.left=(8+Math.random()*Math.max(w,0))+'px';
+  no.style.top=(8+Math.random()*Math.max(h,0))+'px';
+}
+['mouseenter','pointerdown','touchstart','focus','click'].forEach(ev=>no.addEventListener(ev,dodge));
+</script>
+</body>
+</html>
